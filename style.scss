@@ -16,7 +16,8 @@ body {
     height: 100vh;
     width: 250px;
     background: $dark;
-    // transform: translateX(-100%);
+    transform: translateX(-100%);
+    transition: .4s ease-in-out;
 }
 
 .list {
@@ -74,4 +75,59 @@ body {
 .add {
     max-height: 200px;
 
+}
+
+.hamburger-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    &__inner {
+        position: absolute;
+
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 1px;
+
+    background: black;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        width: 32px;
+        height: 1px;
+        background: black;
+        transform: translateX(-50%);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        width: 32px;
+        height: 1px;
+        background: black;
+        transform: translateX(-50%);
+    }
+}
+
+.right {
+    transform: translateX(0%);
+}
+
+.slow {
+    transform: translateX(290px);
 }

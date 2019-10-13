@@ -13,6 +13,10 @@ body {
   height: 100vh;
   width: 250px;
   background: #292929;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 .list {
@@ -66,5 +70,64 @@ body {
 
 .add {
   max-height: 200px;
+}
+
+.hamburger-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 20px;
+  border: none;
+  background: transparent;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger-box__inner {
+  position: absolute;
+}
+
+.hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 32px;
+  height: 1px;
+  background: black;
+}
+
+.hamburger::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 32px;
+  height: 1px;
+  background: black;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.hamburger::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 32px;
+  height: 1px;
+  background: black;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.right {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.slow {
+  -webkit-transform: translateX(290px);
+          transform: translateX(290px);
 }
 /*# sourceMappingURL=style.css.map */
